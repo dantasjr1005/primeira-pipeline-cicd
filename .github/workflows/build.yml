@@ -1,0 +1,16 @@
+  name: CI-CD project
+  on:
+   push:
+    branches: ["main"]
+  workflow_dispatch:
+   jobs:
+  CI:
+   runs-on: ubuntu-latest
+    steps:
+  - name: Obtendo o código
+    user: actions/checkout@v4.1.5
+  - name: Autenticação no Docker Hub
+    user: Docker/login-action@v3.1.0
+    with:
+     username:
+     passowrd:
