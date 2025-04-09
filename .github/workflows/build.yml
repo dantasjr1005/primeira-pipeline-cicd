@@ -12,5 +12,5 @@
   - name: Autenticação no Docker Hub
     user: Docker/login-action@v3.1.0
     with:
-     username:
-     passowrd:
+     username: ${{ secrets.DOCKERHUB_USERNAME }}
+     passowrd: ${{ secrets.DOCKERHUB_TOKEN }}
