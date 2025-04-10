@@ -25,5 +25,6 @@ jobs:
           file: ./src/Dockerfile  # Corrigido o "D" maiúsculo
           push: true
           tags: |
-            fabricioveronez/aula-primeira-pipeline:v${{ github.run_number }}
-            fabricioveronez/aula-primeira-pipeline:latest
+           dantasdev0/aula-primeira-pipeline:v${{github.run_number}}
+           dantasdev0/aula-primeira-pipeline:latest
+
