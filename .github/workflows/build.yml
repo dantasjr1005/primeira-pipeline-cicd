@@ -17,12 +17,13 @@ jobs:
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
+
       - name: Build da Imagem Docker 
         uses: docker/build-push-action@v6.15.0
         with:
-         context: ./src
-         file: ./src/Dockerfile
-         push: true
-         tags: |
-          fabricioveronez/aula-primeira-pipeline:v${{github.run_number}}
-          fabricioveronez/aula-primeira-pipeline:latest
+          context: ./src
+          file: ./src/Dockerfile  # Corrigido o "D" maiúsculo
+          push: true
+          tags: |
+            fabricioveronez/aula-primeira-pipeline:v${{ github.run_number }}
+            fabricioveronez/aula-primeira-pipeline:latest
