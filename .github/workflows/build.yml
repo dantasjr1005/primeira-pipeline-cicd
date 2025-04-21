@@ -45,6 +45,7 @@ jobs:
         uses: azure/k8s-deploy@v4
         with:
           manifests: |
-            ./k8/deployment.yaml
+            ./k8s/deployment.yaml
+
           images: |
             dantasdev0/aula-primeira-pipeline01:v${{ github.run_number }}
